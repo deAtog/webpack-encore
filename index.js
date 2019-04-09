@@ -673,6 +673,18 @@ class Encore {
     }
 
     /**
+     * Configure additional output options
+     *
+     * @param {function} configureOutputCallback
+     * @returns {Encore}
+     */
+    configureOutput(configureOutputCallback = () => {}) {
+        webpackConfig.configureOutput(configureOutputCallback);
+
+        return this;
+    }
+
+    /**
      * Tell Webpack to "split" your entry chunks.
      *
      * This will mean that, instead of adding 1 script tag
