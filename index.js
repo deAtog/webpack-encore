@@ -637,6 +637,17 @@ class Encore {
     }
 
     /**
+     * Tell Webpack to *not* output an entrypoints.json file.
+     *
+     * @returns {Encore}
+     */
+    disableEntrypointsFile() {
+        webpackConfig.disableEntrypointsFile();
+
+        return this;
+    }
+
+    /**
      * Tell Webpack to "split" your entry chunks.
      *
      * This will mean that, instead of adding 1 script tag
