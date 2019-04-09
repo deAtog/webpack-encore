@@ -648,6 +648,17 @@ class Encore {
     }
 
     /**
+     * Tell Webpack to *not* output a manifest.json file.
+     *
+     * @returns {Encore}
+     */
+    disableManifestFile() {
+        webpackConfig.disableManifestFile();
+
+        return this;
+    }
+
+    /**
      * Tell Webpack to "split" your entry chunks.
      *
      * This will mean that, instead of adding 1 script tag
