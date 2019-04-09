@@ -659,6 +659,20 @@ class Encore {
     }
 
     /**
+     * Tell Webpack the desired target for the output.
+     *
+     * Webpack assumes a 'web' target by default.
+     *
+     * @param {string|function} target
+     * @returns {Encore}
+     */
+    setTarget(target) {
+        webpackConfig.setTarget(target);
+
+        return this;
+    }
+
+    /**
      * Tell Webpack to "split" your entry chunks.
      *
      * This will mean that, instead of adding 1 script tag
